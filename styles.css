@@ -69,7 +69,7 @@ body {
 .header {
     /* Try the image inside a 'header' folder first, then fallback to root header.png */
     background-image: url('header/header.png'), url('header.png');
-    background-size: contain, contain;
+    background-size: cover, cover;
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
     background-color: #FFED4E;
@@ -241,6 +241,7 @@ body {
     .header {
         height: 160px;
         min-height: 160px;
+        background-size: contain, contain;
     }
     
     .menu-toggle {
