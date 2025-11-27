@@ -102,11 +102,10 @@ function pagarBizum() {
     modalContent.innerHTML = `
         <button class="modal-close" onclick="cerrarPagoModal()">✖</button>
         <h3 style="color:#228B22; text-align:center; margin-bottom:1rem;">Pago por Bizum</h3>
-        <img src="imagenbizzum.png" alt="Pago Bizum" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+        <img src="imagenbizum.png" alt="Pago Bizum" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
             <p style="text-align:center; color:#fff; font-size:1.1em; background:rgba(34,139,34,0.7); padding:0.7em; border-radius:6px;">
                 Envía el importe a <strong>647045527</strong><br>
-                Incluye tu nombre y dirección en el concepto.<br>
-                <span style="display:block; margin-top:0.5em; font-size:0.95em;">Recuerda añadir <strong>4,5€</strong> de gastos de envío.</span>
+                Incluye tu nombre y dirección en el concepto.
             </p>
     `;
     document.getElementById('modal-pago').style.display = 'flex';
