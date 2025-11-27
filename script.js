@@ -115,7 +115,7 @@ function pagarBizum() {
 // Función para leer muestra gratis
 
 function leerMuestra() {
-    window.open('muestra-bichas.pdf', '_blank');
+    window.open('Novela Bichas muestra.pdf', '_blank');
 }
 
 // Función para ver más del proyecto
