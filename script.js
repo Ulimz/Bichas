@@ -90,8 +90,8 @@ function cerrarPagoModal() {
 
 function pagarTarjeta() {
     cerrarPagoModal();
-    // Abre la plataforma de pago en una nueva pestaña
-    window.open('https://tu-enlace-de-pago.com', '_blank');
+    // Abre Stripe Payment Link en una nueva pestaña
+    window.open('https://buy.stripe.com/cNifZgeMK1OW1ti4TTbEA00', '_blank');
 }
 
 
