@@ -80,6 +80,16 @@ function comprarLibro() {
 }
 
 function abrirPagoModal() {
+    // Resetear el contenido del modal a las opciones iniciales
+    var modalContent = document.getElementById('modal-pago-content');
+    modalContent.innerHTML = `
+        <button class="modal-close" onclick="cerrarPagoModal()">✖</button>
+        <h3 style="color:#fff; text-align:center; margin-bottom:1rem;">Elige cómo quieres pagar</h3>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+            <button class="btn" onclick="pagarTarjeta()">Pagar con Tarjeta</button>
+            <button class="btn" onclick="pagarBizum()">Pagar con Bizum</button>
+        </div>
+    `;
     document.getElementById('modal-pago').style.display = 'flex';
 }
 

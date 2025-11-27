@@ -612,13 +612,14 @@ body {
 .media-modal.open { display: flex; }
 
 .media-modal .modal-content {
-    max-width: 1000px;
-    width: 100%;
+    max-width: 450px;
+    width: 90%;
     max-height: 90vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 8px;
     background: #111;
-    padding: 0.5rem;
+    padding: 1.5rem;
     position: relative;
 }
 
