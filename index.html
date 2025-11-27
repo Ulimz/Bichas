@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bichas - Libro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="background-color: #ffeeba; color: #856404; padding: 16px; text-align: center; font-size: 1.2em; border-bottom: 2px solid #ffd700;">
+        🚧 Esta página está en construcción. Por el momento, solo se puede pagar con <strong>Bizum</strong>.
+    </div>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">BICHAS</h1>
+        </div>
+
+        <!-- Botón hamburguesa para móvil -->
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navegación centrada sobre la imagen del header -->
+        <nav class="header-nav" id="headerNav">
+            <ul>
+                <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#libro" onclick="closeMenu()">El Libro</a></li>
+                <li><a href="#proyecto" onclick="closeMenu()">Mi Proyecto</a></li>
+                <li><a href="#redes" onclick="closeMenu()">Sígueme</a></li>
+                <li><a href="#media" onclick="closeMenu()">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Principal -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Descubre una Historia Fascinante</h2>
+                <p>Un libro que cambiará tu perspectiva</p>
+                <a href="#libro" class="btn">Ver el Libro</a>
+            </div>
+        </section>
+
+        <!-- Sección del Libro -->
+        <section id="libro" class="book-section">
+            <div class="container">
+                <h2>El Libro</h2>
+                <div class="book-content">
+                    <div class="book-cover">
+                        <img src="portada.png" alt="Bichas - Portada del Libro">
+                    </div>
+                    <div class="book-info">
+                        <h3>Bichas</h3>
+                        <p class="author">Por Moises M. Zapata</p>
+                        <p class="description">
+                            Basado en hechos reales. Una historia fascinante que combina aventura, drama y emociones. 
+                            Un libro que te mantendrá en la orilla del asiento desde la primera página hasta el final.
+                        </p>
+                        
+                        <div class="book-details">
+                            <div class="detail">
+                                <span class="label">Páginas:</span>
+                                <span class="value">250+</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Género:</span>
+                                <span class="value">Aventura / Drama</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Año:</span>
+                                <span class="value">2025</span>
+                            </div>
+                        </div>
+
+                        <div class="price-section">
+                            <p class="price">25€</p>
+                            <p class="shipping">Gastos de envío: 4,5€</p>
+                            <p class="total"><strong>Total: 29,5€</strong></p>
+                            <button class="btn btn-large" onclick="comprarLibro()">Comprar Ahora</button>
+                            <button class="btn btn-large btn-secondary" onclick="leerMuestra()">Leer Muestra Gratis</button>
+                            <div id="pago-opciones" style="display:none; margin-top:1rem;">
+                                <button class="btn" onclick="abrirPagoModal()">Elegir método de pago</button>
+                            </div>
+                            <!-- Modal de pago -->
+                            <div id="modal-pago" class="media-modal" style="display:none; z-index:3000;">
+                                <div class="modal-content" style="max-width:400px;" id="modal-pago-content">
+                                    <button class="modal-close" onclick="cerrarPagoModal()">✖</button>
+                                    <h3 style="color:#fff; text-align:center; margin-bottom:1rem;">Elige cómo quieres pagar</h3>
+                                    <div style="display:flex; flex-direction:column; gap:1rem;">
+                                        <button class="btn" onclick="pagarTarjeta()">Pagar con Tarjeta</button>
+                                        <button class="btn" onclick="pagarBizum()">Pagar con Bizum</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonials">
+                            <h4>Lo que dicen los lectores</h4>
+                            <div class="testimonial">
+                                <p>"¡Un libro que no puedo dejar de recomendar! ⭐⭐⭐⭐⭐"</p>
+                                <p class="author-test">- María García</p>
+                            </div>
+                            <div class="testimonial">
+                                <p>"Me encantó cada página. Una obra maestra. ⭐⭐⭐⭐⭐"</p>
+                                <p class="author-test">- Juan López</p>
+                            </div>
+                            <hr style="margin:2rem 0;">
+                            <div class="comments-section">
+                                <h4>Comentarios de lectores</h4>
+                                <form id="comment-form" style="margin-bottom:1rem;">
+                                    <input type="text" id="comment-name" placeholder="Tu nombre" required style="padding:0.5rem; margin-right:0.5rem;">
+                                    <input type="text" id="comment-text" placeholder="Tu comentario" required style="padding:0.5rem; width:40%;">
+                                    <button type="submit" class="btn btn-small" style="padding:0.5rem 1rem;">Enviar</button>
+                                </form>
+                                <div id="comments-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyecto -->
+        <section id="proyecto" class="project-section">
+            <div class="container">
+                <h2>Proyecto Reo</h2>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Proyecto+Reo" alt="Proyecto Reo">
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Reo</h3>
+                        <p>
+                            Aquí describes tu proyecto especial. Puede ser una iniciativa comunitaria, 
+                            una investigación, un negocio, un arte o cualquier cosa que sea importante para ti.
+                        </p>
+                        <ul class="project-features">
+                            <li>✓ Característica 1</li>
+                            <li>✓ Característica 2</li>
+                            <li>✓ Característica 3</li>
+                            <li>✓ Característica 4</li>
+                        </ul>
+                        <a class="btn" href="https://www.facebook.com/ProyectoReo?locale=es_ES" target="_blank">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Redes Sociales -->
+        <section id="redes" class="social-section">
+            <div class="container">
+                <h2>Sígueme en mis Redes Sociales</h2>
+                <p class="subtitle">Mantente actualizado con mis últimas novedades</p>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ProyectoReo?locale=es_ES" target="_blank" class="social-btn facebook">
+                        <span class="icon">👍</span>
+                        <span class="text">Facebook</span>
+                    </a>
+                    <a href="https://tiktok.com/@moises.m.zapata" target="_blank" class="social-btn tiktok">
+                        <span class="icon">🎵</span>
+                        <span class="text">TikTok</span>
+                    </a>
+                    <a href="mailto:novelabichas@gmail.com" class="social-btn email">
+                        <span class="icon">✉️</span>
+                        <span class="text">Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Medios: imágenes y vídeo -->
+        <section id="media" class="media-section">
+            <div class="container">
+                <h2>Galería y Vídeo</h2>
+                <div class="media-grid">
+                    <figure class="media-item">
+                        <img src="foto1.jpg" alt="" loading="lazy" onclick="openMediaModal('image', 'foto1.jpg')">
+                    </figure>
+                    <figure class="media-item">
+                        <img src="foto2.jpg" alt="" loading="lazy" onclick="openMediaModal('image', 'foto2.jpg')">
+                    </figure>
+                    <figure class="media-item">
+                        <img src="foto3.jpg" alt="" loading="lazy" onclick="openMediaModal('image', 'foto3.jpg')">
+                    </figure>
+                    <figure class="media-item">
+                        <img src="foto4.jpg" alt="" loading="lazy" onclick="openMediaModal('image', 'foto4.jpg')">
+                    </figure>
+                    <figure class="media-item video-thumb">
+                        <img src="foto5.png" alt="Miniatura del vídeo" loading="lazy" onclick="openMediaModal('video', 'video autor.mp4')">
+                        <button class="play-overlay" onclick="openMediaModal('video', 'video autor.mp4')">▶</button>
+                    </figure>
+                    <figure class="media-item video-thumb">
+                        <img src="miniaturavideo2.png" alt="Miniatura del vídeo 2" loading="lazy" onclick="openMediaModal('video', 'video2.mp4')">
+                        <button class="play-overlay" onclick="openMediaModal('video', 'video2.mp4')">▶</button>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h3>Recibe Noticias Exclusivas</h3>
+                <p>Suscríbete para enterarte de nuevas publicaciones y ofertas especiales</p>
+                <form onsubmit="suscribirse(event)">
+                    <div class="newsletter-form">
+                        <input type="email" id="email-newsletter" placeholder="Tu email" required>
+                        <button type="submit" class="btn">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Bichas. Todos los derechos reservados.</p>
+            <p>Hecho con ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
