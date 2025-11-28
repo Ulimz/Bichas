@@ -242,7 +242,8 @@ body {
         height: 160px;
         min-height: 160px;
         background-image: url('header-movil.png');
-        background-size: contain;
+        background-size: cover;
+        background-position: center center;
     }
     
     .menu-toggle {
