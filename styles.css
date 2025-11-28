@@ -246,7 +246,8 @@ body {
     }
     
     .menu-toggle {
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 10px;
     }
     
