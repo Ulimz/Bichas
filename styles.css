@@ -242,7 +242,7 @@ body {
         height: 160px;
         min-height: 160px;
         background-image: url('header-movil.png');
-        background-size: cover;
+        background-size: contain;
         background-position: center center;
     }
     
