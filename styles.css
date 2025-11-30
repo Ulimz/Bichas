@@ -481,6 +481,69 @@ body {
     color: #333;
 }
 
+/* Estilos para Proyect Reo */
+.project-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: justify;
+}
+
+.project-intro p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.project-intro blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 237, 78, 0.15);
+    border-left: 4px solid #228B22;
+    font-style: italic;
+    color: #555;
+}
+
+.project-gallery {
+    margin: 2rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.project-separator {
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.project-separator h3 {
+    font-size: 2rem;
+    color: #228B22;
+    margin-bottom: 1rem;
+}
+
+.project-footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
 /* Sección de Redes Sociales */
 .social-section {
     padding: 4rem 0;
@@ -784,6 +847,23 @@ body {
 
     .book-details {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .gallery-grid img {
+        height: 150px;
+    }
+
+    .project-intro {
+        text-align: left;
+    }
+
+    .project-separator h3 {
+        font-size: 1.5rem;
     }
 
     .newsletter-form {
