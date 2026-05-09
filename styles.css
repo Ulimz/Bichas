@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; color: #111; background: #f7f7fb; }
+.container { max-width: 1000px; margin: 36px auto; padding: 16px; }
+.product { display: flex; gap: 24px; background: #fff; border-radius: 10px; box-shadow: 0 6px 18px rgba(22,27,45,0.06); padding: 24px; align-items: center; }
+.gallery { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.cover { width: 220px; height: auto; border-radius: 6px; box-shadow: 0 6px 18px rgba(22,27,45,0.08); }
+.info { flex: 1; }
+.info h1 { margin: 0 0 8px 0; font-size: 1.6rem; }
+.info p { margin: 6px 0; color: #333; }
+.price { font-weight: 700; font-size: 1.25rem; margin-top: 12px; }
+#buyButton { margin-top: 14px; background: #0066ff; color: white; padding: 12px 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
+#buyButton:hover { background: #0052d4; }
+.note { margin-top: 12px; font-size: 0.9rem; color: #666; }
+@media (max-width: 720px) { .product { flex-direction: column; text-align: center; } .gallery { width: 100%; } .cover { width: min(70%, 320px); } .info { width: 100%; } }
+
