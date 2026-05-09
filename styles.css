@@ -333,6 +333,7 @@ body {
 
 .book-cover {
     text-align: center;
+    margin-top: 7.2rem;
 }
 
 .book-cover img {
@@ -652,11 +653,16 @@ body {
 }
 .book-cover img {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 1.2rem;
+}
+
+.book-cover img:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.28);
 }
 
 /* Modal / Lightbox */
@@ -834,6 +840,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .book-cover {
+        margin-top: 0;
+    }
+
     .book-section h2,
     .project-section h2,
     .social-section h2 {
@@ -868,4 +878,133 @@ body {
     .social-links {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Tema visual nueva edicion del libro */
+:root {
+    --bichas-ink: #1e1b18;
+    --bichas-ink-soft: #4d4338;
+    --bichas-sepia-100: #f4efe7;
+    --bichas-sepia-200: #e8ddd0;
+    --bichas-sepia-300: #d6c6b4;
+    --bichas-card: #fbf7f1;
+    --bichas-yellow: #e3cf59;
+    --bichas-yellow-soft: #f0df7f;
+    --bichas-green: #2f7a46;
+    --bichas-green-dark: #245f36;
+    --bichas-border: #d8cbbb;
+}
+
+body {
+    background: var(--bichas-sepia-100);
+    color: var(--bichas-ink);
+}
+
+.header {
+    background-color: var(--bichas-yellow);
+}
+
+.menu-toggle,
+.menu-toggle:hover {
+    background: rgba(47, 122, 70, 0.95);
+}
+
+.header nav {
+    background: rgba(244, 239, 231, 0.92);
+    border: 1px solid rgba(36, 95, 54, 0.2);
+}
+
+.header-nav a {
+    color: var(--bichas-green) !important;
+}
+
+.header-nav a:hover {
+    background: rgba(47, 122, 70, 0.12) !important;
+    color: var(--bichas-green-dark) !important;
+}
+
+.hero,
+.social-section {
+    background: linear-gradient(140deg, var(--bichas-sepia-200) 0%, var(--bichas-yellow-soft) 100%);
+    color: var(--bichas-ink);
+}
+
+.book-section,
+.newsletter-section,
+.media-section {
+    background: var(--bichas-sepia-100);
+}
+
+.book-section h2,
+.project-section h2,
+.social-section h2,
+.media-section h2,
+.newsletter-section h3,
+.project-separator h3,
+.book-info h3,
+.detail .label,
+.comments-section h4 {
+    color: var(--bichas-green-dark);
+}
+
+.book-info .author,
+.project-intro blockquote,
+.newsletter-section p,
+.social-section .subtitle,
+.media-section .subtitle,
+.author-test {
+    color: var(--bichas-ink-soft);
+}
+
+.book-details,
+.price-section,
+.testimonials,
+.comments-section,
+.media-item {
+    background: var(--bichas-card);
+    border: 1px solid var(--bichas-border);
+}
+
+.project-intro blockquote {
+    background: rgba(227, 207, 89, 0.18);
+    border-left: 4px solid var(--bichas-green);
+}
+
+.testimonial {
+    border-left: 4px solid var(--bichas-green);
+}
+
+.price {
+    color: var(--bichas-green-dark);
+}
+
+.btn,
+.btn-large.btn-secondary,
+.btn-large.btn-secondary:hover {
+    background: linear-gradient(90deg, var(--bichas-green) 0%, var(--bichas-yellow) 100%) !important;
+    color: #fff !important;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 12px rgba(47, 122, 70, 0.35);
+}
+
+.btn-secondary {
+    border-color: var(--bichas-green);
+}
+
+.newsletter-form input {
+    border-color: var(--bichas-border);
+    background: #fff;
+    color: var(--bichas-ink);
+}
+
+.newsletter-form input:focus {
+    border-color: var(--bichas-green);
+    box-shadow: 0 0 0 3px rgba(47, 122, 70, 0.12);
+}
+
+.footer {
+    background: #1f1a16;
+    color: #f4efe7;
 }
