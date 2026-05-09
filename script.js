@@ -112,9 +112,12 @@ function pagarBizum() {
     modalContent.innerHTML = `
         <button class="modal-close" onclick="cerrarPagoModal()">✖</button>
         <h3 style="color:#228B22; text-align:center; margin-bottom:1rem;">Pago por Bizum</h3>
-        <img src="imagenbizum.png" alt="Pago Bizum" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <p style="text-align:center; color:#fff; font-size:1.1em; background:rgba(34,139,34,0.7); padding:0.7em; border-radius:6px; margin-bottom:0.8rem;">
+                Importe total por ejemplar: <strong>21,94€</strong><br>
+                (Libro 16,95€ + envío 4,99€)
+            </p>
             <p style="text-align:center; color:#fff; font-size:1.1em; background:rgba(34,139,34,0.7); padding:0.7em; border-radius:6px;">
-                Envía el importe a <strong>647045527</strong><br>
+                Envía el pago a <strong>647045527</strong><br>
                 Incluye tu nombre y dirección en el concepto.
             </p>
     `;
