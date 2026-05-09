@@ -335,30 +335,11 @@ body {
     text-align: center;
 }
 
-.book-covers {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    align-items: start;
-}
-
 .book-cover img {
-    width: 100%;
-    max-width: 260px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-.book-cover img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 900px) {
-    .book-covers {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .book-info h3 {

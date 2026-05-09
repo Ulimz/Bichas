@@ -86,7 +86,7 @@ function abrirPagoModal() {
         <button class="modal-close" onclick="cerrarPagoModal()">✖</button>
         <h3 style="color:#fff; text-align:center; margin-bottom:1rem;">Elige cómo quieres pagar</h3>
         <div style="display:flex; flex-direction:column; gap:1rem;">
-            <button class="btn" onclick="pagarTarjeta()">Pagar con Tarjeta</button>
+            <button class="btn" disabled style="opacity:0.55; cursor:not-allowed;">Pago con Tarjeta (temporalmente no disponible)</button>
             <button class="btn" onclick="pagarBizum()">Pagar con Bizum</button>
         </div>
     `;
@@ -100,8 +100,7 @@ function cerrarPagoModal() {
 
 function pagarTarjeta() {
     cerrarPagoModal();
-    // Abre Stripe Payment Link en una nueva pestaña
-    window.open('https://buy.stripe.com/cNifZgeMK1OW1ti4TTbEA00', '_blank');
+    alert('El pago con tarjeta está temporalmente desactivado. Usa Bizum por el momento.');
 }
 
 
