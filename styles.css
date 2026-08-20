@@ -311,6 +311,38 @@ body {
     margin-bottom: 2rem;
 }
 
+.urgent-notice {
+    max-width: 960px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 4px solid #DC143C;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.urgent-notice h2 {
+    font-size: clamp(1.8rem, 4.1vw, 3.1rem);
+    line-height: 1.25;
+    color: #B22222;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+}
+
+.urgent-notice p {
+    font-size: clamp(1.05rem, 2.1vw, 1.5rem);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    color: #1f2a1f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.urgent-notice .notice-thanks {
+    margin-bottom: 0;
+    color: #228B22;
+}
+
 /* Sección del Libro */
 .book-section {
     padding: 4rem 0;
