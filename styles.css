@@ -343,6 +343,32 @@ body {
     color: #228B22;
 }
 
+.store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+    margin: 1.1rem 0;
+}
+
+.store-link {
+    display: inline-block;
+    background: #228B22;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: 2px solid #1d761d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.store-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+    box-shadow: 0 6px 14px rgba(34, 139, 34, 0.3);
+}
+
 /* Sección del Libro */
 .book-section {
     padding: 4rem 0;
